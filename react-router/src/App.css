@@ -1,0 +1,8 @@
+.banner-img {
+  height: 640px;       
+  /* object-fit: cover;    */
+  width: 95%;         
+}
+.navbar{
+    background-color: white;
+}
