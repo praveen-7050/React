@@ -1,5 +1,6 @@
 import "./App.css";
 import { Fragment } from "react";
+import Counter from "./Counter";
 let name = "praveen";
 const gender = "Male";
 let islogged = true;
@@ -20,6 +21,7 @@ function App() {
         <label htmlFor="age">Your age : </label>
         <input id="age" type="number" />
       </div>
+      <Counter/>
     </Fragment>
   );
 }
