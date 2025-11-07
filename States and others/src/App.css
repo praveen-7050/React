@@ -1,0 +1,28 @@
+.details table{
+    border:1px solid #ccc;
+    width:300px;
+    border-collapse: collapse;
+    
+}
+.details td,
+.details th{
+    text-align: left;
+    border: 1px solid #ccc;
+}
+.details th{
+    width:100px
+}
+.details td{
+    color: tomato;
+    font-weight: 500;
+    padding: 10px 20px ;
+}
+.card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); 
+  cursor: pointer;
+}
