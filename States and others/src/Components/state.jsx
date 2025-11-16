@@ -4,44 +4,21 @@ import "bootstrap/dist/js/bootstrap.bundle.min.js";
 // import { useState } from "react";
 
 export const State = () => {
-    // let count =0
-    const [count , setcount] = useState(0)
-    function increase(){
-        setcount(count+1)
-    }
-    function decrease(){
-       setcount(count-1) 
-    }
-      const [yes ,setyes] = useState("yes" , "No")
-    function postive(){
-        setyes('yes')
-        }
-           function negative(){
-            setyes("No")
-        }
-    let name =(name)=>{
-        this.name = name
-    }
+  let arr1 =[1,2,3,456,"mango"];
+  // let vegeies = ['tomato','beetroot','ladiesfinger']
+  let  output= arr1.map((items,index)=>{
     return (
-      <>
-        <div className="container">
-          <p className="text-muted fw-bold">Number of numbers = {count}</p>
-          <button className="btn btn-outline-success mx-3" onClick={increase}>
-            Increase
-          </button>
-          <button className="btn btn-outline-danger" onClick={decrease}>
-            Decrease
-          </button>
-        </div>
-        <div className="container fw-bold">
-          <p className="text dangerbn fw-bold">{yes}</p>
-          <button className="btn btn-primary mx-3" onClick={postive}>
-            Click to yes 
-          </button>
-          <button className="btn btn-primary" onClick={negative}> click to no</button>
-        </div>
-      </>
+      <div key={index}>
+        <h1>{items}</h1>
+        {/* <h1>efewfwe</h1> */}
+      </div>
     );
-    
+})
+  return(
+    <div className='container ms-5'>
+      <p className="text-danger fs-5 fw-semibold">{arr1}</p>
+      <p className="text-success fs-5 fw-semibold">{output}</p>
+    </div>
+  )
 }
 

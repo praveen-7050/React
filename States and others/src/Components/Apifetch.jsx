@@ -35,10 +35,10 @@ const Apifetch = () => {
                     <p className="card-text">Rating : {item.rating.rate} / 5</p>
                     <p className="card-text text-success fw-bold">${item.price}</p>
                     <div class="d-grid gap-2">
-                      <button class="btn btn-primary fw-semibold" type="button">
+                      <button className="btn btn-primary fw-semibold" type="button">
                         SHOP NOW
                       </button>
-                      <button class="btn btn-danger fw-semibold" type="button">
+                      <button className="btn btn-danger fw-semibold" type="button">
                         ADD TO CART
                       </button>
                     </div>
