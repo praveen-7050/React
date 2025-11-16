@@ -1,6 +1,8 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
+import { ThemeContext } from "../App";
 
 function Content() {
+  const {Theme} = useContext(ThemeContext)
   let para1 = {
     backgroundColor: "yellow",
     color: "red",
@@ -14,10 +16,14 @@ function Content() {
     console.log("hello", user);
     e.target.innerText = "teargeted event";
   }
+  const themestyle ={
+    backgroundColor:Theme==="Light"? white :'black',
+    color:Theme ==="Light"? 'black':'white'
+  }
   return (
     <>
       <div className="container">
-        <p className="text-green" style={para1}>
+        <p className="text-green" style={themestyle}>
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit vel cumque molestiae provident cupiditate deleniti dolor minus ipsum explicabo atque commodi dignissimos velit, iusto nesciunt eaque corrupti doloremque quidem. Neque, nisi modi. Eum
           adipisci magni eius unde, est molestiae voluptas doloribus in eaque natus, voluptates sed tenetur non expedita, praesentium accusantium consequuntur officiis dignissimos ducimus nobis? Velit magni quibusdam cupiditate est exercitationem veritatis
           labore officiis similique recusandae vitae sequi, iste, iusto tempora unde maxime quasi? At optio vel aspernatur voluptates ratione aperiam corporis vitae doloribus accusantium quis labore, voluptatibus minus nemo fugit adipisci molestias quod,
@@ -38,5 +44,4 @@ function Content() {
     </>
   );
 }
-
 export default Content;
