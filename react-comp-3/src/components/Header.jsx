@@ -1,3 +1,5 @@
+
+
 function Header(props) {
   console.log(props)
   return (
@@ -26,7 +28,7 @@ function Header(props) {
                 </div>
                 <div className="navbar-nav ms-auto">
                   <button className="btn btn-success mx-2 my-2">Login</button>
-                  <button className="btn btn-info text-light my-2">Sign in</button>
+                  <button className="btn btn-info text-light my-2">Theme</button>
                 </div>
               </div>
             </div>
