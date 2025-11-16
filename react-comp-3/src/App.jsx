@@ -1,19 +1,26 @@
-import './App.css'
-import Header from './components/Header'
-import Content from './components/Content';
-import Footer from "./components/Footer"
+import "./App.css";
+'
+import Header from "./components/Header";
+import Content from "./components/Content";
+import Footer from "./components/Footer";
+import Unknown from "./components/Unknown"
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.bundle.min.js";
 import "bootstrap-icons/font/bootstrap-icons.css";
-function App() {
-  // let name="praveen"
+import { createContext, useState } from "react";
+export const ThemeContext = createContext();
+export function App() {
+  const [Theme, setTheme] = useState("light");
+  const toggletheme = () => {
+    setTheme((curr) => (curr === "light" ? "dark" : "light"));
+  };
   return (
-    <div className='App'>
+    <ThemeContext.Provider value={{ Theme, toggleTheme }}>
+      {/* <button onClick={toggletheme}>Theme</button>
       <Header Name="praveen" />
-      <Content/>
-      <Footer UName="surya" />
-    </div>
+      <Content />
+      <Footer UName="surya" /> */}
+      <Unknown />
+    </ThemeContext.Provider>
   );
 }
-
-export default App
